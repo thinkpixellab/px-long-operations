@@ -1,4 +1,4 @@
-class SingleOperation {
+export default class SingleOperation {
     constructor() {
         this.pending = {};
     }
@@ -16,4 +16,3 @@ class SingleOperation {
         return promise;
     }
 }
-module.exports = SingleOperation;

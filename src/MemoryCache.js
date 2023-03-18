@@ -1,6 +1,6 @@
-var SingleOperation = require('./SingleOperation');
+import SingleOperation from "./SingleOperation";
 
-class MemoryCache {
+export default class MemoryCache {
     constructor({ defaultTTL = 5 * 60 * 1000, ttlByKey = {}, debug = false } = {}) {
         this.cache = {};
         this.singleOperation = new SingleOperation();
@@ -18,7 +18,7 @@ class MemoryCache {
         this.cache = {};
     }
 
-    async ensure(key, valueFactory, { ttl, valueErrorRetries = 3, allowLazyRefresh = false } = {}) {
+    async ensure(key, valueFactory, { ttl, valueErrorRetries = 0, allowLazyRefresh = false } = {}) {
         var refreshValue = oldValue => {
             return this.singleOperation.run(key, async () => {
                 let retry = 0;
@@ -60,7 +60,7 @@ class MemoryCache {
         }
     }
 
-    ensureLazy(key, valueFactory, { ttl, valueErrorRetries = 3 } = {}) {
+    ensureLazy(key, valueFactory, { ttl, valueErrorRetries = 0 } = {}) {
         return this.ensure(key, valueFactory, { ttl, valueErrorRetries, allowLazyRefresh: true });
     }
 
@@ -103,4 +103,3 @@ class CacheEntry {
     }
 }
 
-module.exports = MemoryCache;

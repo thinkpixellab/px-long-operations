@@ -1,19 +1,24 @@
 {
-  "name": "@thinkpixellab-public/px-long-operations",
-  "version": "1.0.0",
-  "description": "Utilities for long running operations",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/thinkpixellab/px-long-operations.git"
-  },
-  "author": "Pixel Lab",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/thinkpixellab/px-long-operations/issues"
-  },
-  "homepage": "https://github.com/thinkpixellab/px-long-operations#readme"
+    "name": "@thinkpixellab-public/px-long-operations",
+    "version": "1.0.0",
+    "description": "Utilities for long running operations",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "test": "vitest",
+        "coverage": "vitest run --coverage"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/thinkpixellab/px-long-operations.git"
+    },
+    "author": "Pixel Lab",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/thinkpixellab/px-long-operations/issues"
+    },
+    "homepage": "https://github.com/thinkpixellab/px-long-operations#readme",
+    "devDependencies": {
+        "vitest": "^0.29.3"
+    }
 }

@@ -1,4 +1,7 @@
-module.exports = {
-    MemoryCache: require('./src/MemoryCache'),
-    SingleOperation: require('./src/SingleOperation'),
+import MemoryCache from "./src/MemoryCache";
+import SingleOperation from "./src/SingleOperation";
+
+export {
+    MemoryCache,
+    SingleOperation,
 };
