@@ -1,7 +1,4 @@
-import MemoryCache from "./src/MemoryCache";
-import SingleOperation from "./src/SingleOperation";
+import MemoryCache from './src/MemoryCache.js';
+import SingleOperation from './src/SingleOperation.js';
 
-export {
-    MemoryCache,
-    SingleOperation,
-};
+export { MemoryCache, SingleOperation };

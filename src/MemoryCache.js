@@ -1,4 +1,4 @@
-import SingleOperation from "./SingleOperation";
+import SingleOperation from './SingleOperation.js';
 
 export default class MemoryCache {
     constructor({ defaultTTL = 5 * 60 * 1000, ttlByKey = {}, debug = false } = {}) {
@@ -102,4 +102,3 @@ class CacheEntry {
         this.expires = expires;
     }
 }
-
